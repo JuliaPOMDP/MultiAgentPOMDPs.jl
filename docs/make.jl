@@ -3,12 +3,12 @@ using Documenter
 
 makedocs(;
     modules=[MultiAgentPOMDPs],
-    authors="rejuvyesh <mail@rejuvyesh.com> and contributors",
-    repo="https://github.com/rejuvyesh/MultiAgentPOMDPs.jl/blob/{commit}{path}#L{line}",
+    authors="rejuvyesh <mail@rejuvyesh.com>, Shushman <shushmanchoudhary@gmail.com> and contributors",
+    repo="https://github.com/JuliaPOMDP/MultiAgentPOMDPs.jl/blob/{commit}{path}#L{line}",
     sitename="MultiAgentPOMDPs.jl",
     format=Documenter.HTML(;
         prettyurls=get(ENV, "CI", "false") == "true",
-        canonical="https://rejuvyesh.github.io/MultiAgentPOMDPs.jl",
+        canonical="https://juliapomdp.github.io/MultiAgentPOMDPs.jl",
         assets=String[],
     ),
     pages=[
@@ -17,5 +17,5 @@ makedocs(;
 )
 
 deploydocs(;
-    repo="github.com/rejuvyesh/MultiAgentPOMDPs.jl",
+    repo="github.com/JuliaPOMDP/MultiAgentPOMDPs.jl",
 )
