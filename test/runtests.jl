@@ -2,12 +2,13 @@ using MultiAgentPOMDPs
 using POMDPs
 using Test
 
+mutable struct X <: JointMDP{Vector{Float64},Vector{Bool}} end
+abstract type Z <: JointMDP{Vector{Float64},Vector{Int}} end
+mutable struct Y <: Z end
+
+
 @testset "MultiAgentPOMDPs.jl" begin
     @testset "inference" begin
-        mutable struct X <: JointMDP{Vector{Float64},Vector{Bool}} end
-        abstract type Z <: JointMDP{Vector{Float64},Vector{Int}} end
-        mutable struct Y <: Z end
-
         @test_throws ErrorException statetype(Int)
         @test_throws ErrorException actiontype(Int)
         @test_throws ErrorException obstype(Int)
